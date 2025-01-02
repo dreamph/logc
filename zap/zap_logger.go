@@ -95,7 +95,7 @@ func (l *zapLogger) WithLogger(ctx context.Context) logc.Logger {
 		return l
 	}
 
-	zapFields := ToZapFields(logc.GetFields(ctx))
+	zapFields := ToZapFields(fields)
 	if len(zapFields) == 0 {
 		return l
 	}
